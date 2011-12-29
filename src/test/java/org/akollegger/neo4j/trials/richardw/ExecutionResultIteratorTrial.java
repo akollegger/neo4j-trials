@@ -46,6 +46,8 @@ public class ExecutionResultIteratorTrial {
             Node blueberry = graphdb.createNode();
             blueberry.setProperty("kind", "blueberry");
             blueberry.createRelationshipTo(fruit, IS_A);
+
+            tx.success();
         } finally {
             tx.finish();
         }
